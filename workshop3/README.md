@@ -1,8 +1,6 @@
-## Run commands
+## Access Heroku API
 
-```bash
-uvicorn app.flask-app:app
-```
+`https://bmi-omdena-webapp.herokuapp.com/bmi`
 
 ## Test
 
@@ -11,4 +9,12 @@ uvicorn app.flask-app:app
 
 ---
 
-![screenshot](screenshots/get-request.jpeg)
+## Results
+
+### FastAPI Docs:
+
+![screenshot](screenshots/image1.jpeg)
+
+### Postman:
+
+![screenshot2](screenshots/image2.jpeg)
