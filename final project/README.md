@@ -27,7 +27,7 @@ Output: `Daily_radiation`
 ```
 
 ## Results
-```
+```json
 [
     {
         "Daily_DNI": 522.2,
