@@ -1,6 +1,6 @@
-from fastapi import FastAPI
-from app.custom_function import bmi
 import uvicorn
+from app.custom_function import bmi
+from fastapi import FastAPI
 
 app = FastAPI()
 
@@ -13,4 +13,3 @@ def read_main():
 @app.get("/bmi")
 def read_item(height: int, weight: int):
     return {"BMI": bmi(height, weight)}
-
