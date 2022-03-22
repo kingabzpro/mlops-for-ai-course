@@ -5,9 +5,9 @@ Input: 'month', 'day', 'Daily_Temp', 'Daily_Precip', 'Daily_Humidity', 'Daily_Pr
 Output: 'Daily_radiation'
 """
 
-from flask import Flask, jsonify, request
-import numpy as np
 import joblib
+import numpy as np
+from flask import Flask, jsonify, request
 
 # instantiate flask object
 app = Flask(__name__)
@@ -16,8 +16,8 @@ app = Flask(__name__)
 @app.route("/", methods=["GET", "POST"])
 def get_input():
     """
-   A flask script to interface between ml model and the user request.
-   """
+    A flask script to interface between ml model and the user request.
+    """
     # load packets
     packet = request.get_json(force=True)
     # extract and transform the input values
@@ -31,4 +31,3 @@ def get_input():
     solar_irradiation = loaded_model.predict(data)[0]
 
     return jsonify(packet, {"solar irradiance": solar_irradiation})
-
