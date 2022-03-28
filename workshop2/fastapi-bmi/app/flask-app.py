@@ -1,4 +1,3 @@
-import uvicorn
 from app.custom_function import bmi
 from fastapi import FastAPI
 
